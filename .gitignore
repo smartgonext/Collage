@@ -1,0 +1,17 @@
+# Raw images and camera uploads (large size)
+/images/
+
+# System and temporary files
+.DS_Store
+Thumbs.db
+
+# Python caches and local environment files
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
+
+# Local editor backups
+.history/
+
