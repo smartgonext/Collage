@@ -410,8 +410,142 @@
         }
         .socials svg:hover { fill: var(--pink-neon); transform: translateY(-3px) scale(1.2); filter: drop-shadow(0 0 8px var(--pink-neon)); }
 
-        @media (max-width: 1024px) { .profiles-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .profiles-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .profile-card { padding: 20px 10px; } .avatar-ph { width: 70px; height: 70px; font-size: 1.3rem; } .profile-card .name { font-size: 1.1rem; } .profile-card .quote { font-size: 0.8rem; } }
+        /* ========================================== */
+        /* COMPREHENSIVE MOBILE RESPONSIVENESS FIXES  */
+        /* ========================================== */
+        
+        /* 1. Tablet Viewports (< 1024px) */
+        @media (max-width: 1024px) { 
+            .profiles-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 20px;
+            } 
+            /* Ensure download button is always visible on touch screens */
+            .card-download-btn {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+        }
+
+        /* 2. Mobile Viewports (< 768px) */
+        @media (max-width: 768px) {
+            .section-title {
+                margin-bottom: 2.5rem;
+            }
+            .hero-title {
+                font-size: clamp(2.2rem, 8vw, 4.5rem) !important;
+                letter-spacing: 1px;
+            }
+            .hero-label {
+                font-size: 0.85rem;
+                letter-spacing: 0.3em;
+            }
+            .hero-subtitle-container {
+                font-size: 1.1rem !important;
+                height: auto;
+                margin-bottom: 1.8rem;
+            }
+            .hero-date {
+                padding: 8px 22px;
+                font-size: 0.8rem;
+                margin-bottom: 2.5rem;
+            }
+            .hero-cta {
+                padding: 14px 32px;
+                font-size: 1rem;
+            }
+            .drive-link {
+                padding: 8px 18px;
+                font-size: 0.8rem;
+            }
+            #skip-intro {
+                top: 20px;
+                right: 20px;
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+            .lb-content {
+                width: 92vw;
+                height: 60vh;
+            }
+            #lb-close {
+                top: 20px;
+                right: 20px;
+                font-size: 2rem;
+            }
+        }
+
+        /* 3. Small Mobile & Squeezed Screens (< 600px) */
+        @media (max-width: 600px) { 
+            .profiles-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 12px; 
+            } 
+            .profile-card { 
+                padding: 20px 12px; 
+            } 
+            .avatar-ph { 
+                width: 75px; 
+                height: 75px; 
+                font-size: 1.4rem; 
+                margin-bottom: 15px;
+            } 
+            .profile-card .name { 
+                font-size: 1.05rem; 
+            } 
+            .profile-card .dept {
+                font-size: 0.75rem;
+                margin-bottom: 12px;
+            }
+            .profile-card .quote { 
+                font-size: 0.8rem; 
+                margin-bottom: 18px;
+                line-height: 1.35;
+            } 
+            .instagram-link {
+                padding: 5px 12px;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* 4. Ultra-Small Mobile Viewports (< 480px) */
+        @media (max-width: 480px) {
+            .section-container {
+                padding: 60px 4vw;
+            }
+            /* Switch to 1 column on tiny phones so quote & titles have full horizontal breathing room */
+            .profiles-grid { 
+                grid-template-columns: 1fr !important; 
+                gap: 20px !important; 
+            } 
+            .profile-card { 
+                padding: 30px 20px !important; 
+            } 
+            .avatar-ph { 
+                width: 85px !important; 
+                height: 85px !important; 
+                font-size: 1.7rem !important; 
+            } 
+            .profile-card .name { 
+                font-size: 1.25rem !important; 
+            } 
+            .profile-card .quote { 
+                font-size: 0.9rem !important; 
+            } 
+            .message-section {
+                padding: 100px 4vw;
+            }
+            .message-text {
+                font-size: 1.45rem !important;
+                line-height: 1.5;
+            }
+            .footer-logo {
+                font-size: 1.8rem;
+            }
+            .footer-tagline {
+                font-size: 0.9rem;
+            }
+        }
 
         /* CINEMATIC TIMELINE SECTION REMOVED */
 
